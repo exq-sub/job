@@ -1,0 +1,35 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">投稿する</h1>
+  </div>
+
+  <%= form_tag("/posts/create") do %>
+    <div class="form">
+          <div class="form-body">
+
+      <% @post.errors.full_messages.each do |message| %>
+              <div class="form-error">
+                <%= message %>
+              </div>
+      <% end %>
+
+
+            <h3>職種</h3>
+            <p><textarea name="job"></textarea></p>
+
+            <h3>地域</h3>
+            <p><textarea name="region"></textarea></p>
+
+            <h3>給与</h3>
+            <p><textarea name="allowance"></textarea></p>
+
+            <h3>求人内容の詳細</h3>
+            <p><textarea name="detail"></textarea></p>
+
+            <input type="submit" value="投稿">
+
+          </div>
+        </div>
+   <% end %>
+
+</div>

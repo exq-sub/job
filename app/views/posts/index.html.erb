@@ -1,0 +1,30 @@
+
+
+<div class="main posts-index">
+  <div class="container">
+
+    <div class="posts-index-item">
+
+      <h1>求人一覧</h1>
+
+      <% @posts.each do |post|%>
+
+        <article>
+
+          <section>
+                <h2>職種 <%= link_to(post.job,"/posts/#{post.id}")%>　</h2>
+                <h4>地域 <%= post.region %>　</h4>
+            <section>
+                  <h3>給与 <%= post.allowance %>　</h3>
+            </section>
+          </section>
+              <p class="lead">求人内容の詳細　【未経験】</p>
+              <p><%= post.detail %></p>
+
+            </article>
+          <% end %>
+     
+    </div>
+  </div>
+</div>
+<!--/<= pagy_nav(@pagy) %>-->

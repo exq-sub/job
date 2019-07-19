@@ -1,0 +1,31 @@
+<div class="main posts-show">
+  <div class="container">
+    <div class="posts-show-item">
+
+
+     <h1>求人一覧</h1>
+
+      <article>
+        <img src="<%= "/user_images/#{@user.image_name}" %>" alt="企業イメージ">
+        <%= link_to(@user.name,"/users/#{@user.id}")%>
+
+          <section>
+              <h2>職種 <%= @post.job %>　</h2>
+              <h4>地域 <%= @post.region %>　</h4>
+            <section>
+                  <h3>給与 <%= @post.allowance %>　</h3>
+            </section>
+          </section>
+              <p class="lead">求人内容の詳細　【未経験】</p>
+                    <p><%= @post.detail %></p>
+
+        <%= @post.created_at %>
+        <%= link_to("編集","/posts/#{@post.id}/edit")%>
+        <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+      </article>
+
+
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job: MyString
+  region: MyString
+  allowance: MyString
+  detail: MyText
+  user_id: 1
+
+two:
+  job: MyString
+  region: MyString
+  allowance: MyString
+  detail: MyText
+  user_id: 1

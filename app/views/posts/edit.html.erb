@@ -1,0 +1,37 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">編集する</h1>
+  </div>
+
+<div>
+
+     <%= form_tag("/posts/#{@post.id}/update") do%>
+
+     <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+
+        <div class="form">
+              <div class="form-body">
+
+                <h3>職種</h3>
+                <p><textarea name="job"><%= @post.job %></textarea></p>
+
+                <h3>地域</h3>
+                <p><textarea name="region"><%= @post.region %></textarea></p>
+
+                <h3>給与</h3>
+                <p><textarea name="allowance"><%= @post.allowance %></textarea></p>
+
+                <h3>求人内容の詳細</h3>
+                <p><textarea name="detail"><%= @post.detail %></textarea></p>
+
+                <input type="submit" value="保存">
+
+              </div>
+            </div>
+        <% end %>
+
+</div>
